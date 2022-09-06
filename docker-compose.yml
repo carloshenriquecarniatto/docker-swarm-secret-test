@@ -1,0 +1,12 @@
+﻿version: '3.9'
+services:
+  app:
+    image: dockersecret:latest
+    ports:
+      - "8080:80"
+    secrets:
+      - MySecret
+    
+secrets:
+  MySecret:
+    external: true
